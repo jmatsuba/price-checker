@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @price_observation.item.display_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @price_observation.user.name %>
+</p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @price_observation.store.display_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @price_observation.price %>
+</p>
+
+<%= link_to 'Edit', edit_price_observation_path(@price_observation) %> |
+<%= link_to 'Back', price_observations_path %>

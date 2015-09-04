@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Province</th>
+      <th>Postal code</th>
+      <th>Store Banner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stores.each do |store| %>
+      <tr>
+        <td><%= store.location_name %></td>
+        <td><%= store.address %></td>
+        <td><%= store.city %></td>
+        <td><%= store.province %></td>
+        <td><%= store.postal_code %></td>
+        <td><%= store.store_banner.name %></td>
+        <td><%= link_to 'Show', store %></td>
+        <td><%= link_to 'Edit', edit_store_path(store) %></td>
+        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Store', new_store_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@store_banner) do |f| %>
+  <% if @store_banner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@store_banner.errors.count, "error") %> prohibited this store_banner from being saved:</h2>
+
+      <ul>
+      <% @store_banner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
