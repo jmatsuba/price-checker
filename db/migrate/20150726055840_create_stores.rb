@@ -6,7 +6,7 @@ class CreateStores < ActiveRecord::Migration
       t.string :city
       t.string :province
       t.string :postal_code
-      t.references :storebanner, index: true, foreign_key: true
+      t.references :store_banner, index: true, foreign_key: true
 
       t.timestamps null: false
     end
