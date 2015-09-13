@@ -12,27 +12,28 @@
   <% end %>
 
 
-  <div class="field">
-    <%= f.label :item_id %><br>
-    <%= f.collection_select(:item_id, Item.all, :id, :name) %>
+
+  <div class="form-group">
+    <%= f.label :item_id %>
+    <%= f.collection_select(:item_id, Item.all, :id, :name, {}, {class: "form-control"})  %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+  <div class="form-group">
+    <%= f.label :user_id %>
+    <%= f.collection_select(:user_id, User.all, :id, :name, {}, {class: "form-control"}) %>
   </div>
 
-  <div class="field">
-    <%= f.label :store_id %><br>
-    <%= f.collection_select(:store_id, Store.all, :id, :display_name) %>
+  <div class="form-group">
+    <%= f.label :store_id %>
+    <%= f.collection_select(:store_id, Store.all, :id, :display_name, {}, {class: "form-control"}) %>
   </div>
 
 
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.number_field :price, class: "form-control", step: 0.01 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-default" %>
   </div>
 <% end %>
