@@ -7,10 +7,10 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Brand</th>
           <th>Size</th>
-          <th>Notes</th>
-          <th>Upc</th>
+          <th>Average $</th>
+          <th>Min $</th>
+          <th>Max $</th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -18,10 +18,10 @@
         <% @items.each do |item| %>
           <tr>
             <td><%= item.name %></td>
-            <td><%= item.brand %></td>
             <td><%= item.size %></td>
-            <td><%= item.notes %></td>
-            <td><%= item.upc %></td>
+            <td><%= item.average_price %></td>
+            <td><%= item.minimum_price %></td>
+            <td><%= item.maximum_price %></td>
             <td><%= link_to 'Show', item %></td>
             <td><%= link_to 'Edit', edit_item_path(item) %></td>
             <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

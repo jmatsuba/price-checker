@@ -7,6 +7,15 @@ class Item < ActiveRecord::Base
   end
 
   def average_price
+    price_observations.average(:price)
+  end
+
+  def maximum_price
+    price_observations.maximum(:price)
+  end
+
+  def minimum_price
+    price_observations.minimum(:price)
   end
 
 end
